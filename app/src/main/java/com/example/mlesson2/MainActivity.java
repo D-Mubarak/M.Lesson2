@@ -2,7 +2,6 @@ package com.example.mlesson2;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -28,15 +27,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void initListener() {
         go.setOnClickListener(v -> {
-            if (password.getText().toString().length() > 6 && username.getText().toString().length() > 0) {
-                Intent intent = new Intent(this, HW_Activity.class);
+            if (password.getText().toString().length() > 6 && username.getText().toString() != null) {
+                Intent intent = new Intent(this, ThirdActivity.class);
                 intent.putExtra("key2", password.getText().toString());
                 intent.putExtra("key1", username.getText().toString());
                 startActivity(intent);
             } else if (password.getText().toString().length() < 6) {
-                password.setError("Пароль должен быть больше 6 символов !");
+                password.setError(getString(R.string.password_error_text));
             } else if (username.getText().toString().length() <= 0) {
-                username.setError("Заполните пустое пространство !");
+                username.setError(getString(R.string.username_error_text));
             }
         });
     }

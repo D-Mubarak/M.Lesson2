@@ -10,8 +10,8 @@
     </style>
 
     <style name="marginHorizontal">
-        <item name="android:layout_marginHorizontal">@dimen/margin4x</item>
-        <item name="android:layout_marginTop">@dimen/marginMinus2x</item>
+        <item name="android:layout_marginHorizontal">@dimen/margin2x</item>
+        <item name="android:layout_marginTop">@dimen/margin2x</item>
     </style>
 
 </resources>

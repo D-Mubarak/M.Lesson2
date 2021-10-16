@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 
-public class HW_Activity extends AppCompatActivity {
+public class ThirdActivity extends AppCompatActivity {
     private ImageView IVPhoto;
     private Button back;
     private TextView editPhoto;

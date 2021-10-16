@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HW_Activity">
+    tools:context=".ThirdActivity">
 
     <ImageView
         android:id="@+id/photo_of_user"
@@ -13,7 +13,8 @@
         android:layout_marginTop="@dimen/margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/circle_accaunt_svg"/>
 
     <TextView
         android:id="@+id/textView"
@@ -21,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Edit Photo"
+        android:text="@string/edit_photo"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +33,7 @@
         style="@style/marginHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Your name:"
+        android:hint="@string/your_name"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
@@ -40,7 +41,7 @@
         style="@style/marginHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Your surname:"
+        android:hint="@string/your_surname"
         app:layout_constraintTop_toBottomOf="@id/name" />
 
     <TextView
@@ -48,33 +49,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/marginHorizontal"
-        android:text="Private information"
-        android:textSize="18dp"
+        android:text="@string/private_information"
+        android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@+id/surname"
         android:textColor="@color/gray" />
 
     <EditText
+        android:drawableStart="@drawable/email_art"
         android:id="@+id/email"
+        android:drawablePadding="@dimen/marginMinus2x"
         style="@style/marginHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Your Email:"
+        android:hint="@string/your_email"
         app:layout_constraintTop_toBottomOf="@id/privateInfo" />
 
     <EditText
+        android:drawablePadding="@dimen/marginMinus2x"
+        android:drawableStart="@drawable/phone_art"
         android:id="@+id/number_of_phone"
         style="@style/marginHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Your number of phone:"
+        android:hint="@string/your_number_of_phone"
         app:layout_constraintTop_toBottomOf="@id/email" />
 
     <EditText
+        android:drawablePadding="@dimen/marginMinus2x"
+        android:drawableStart="@drawable/lock_art"
         android:id="@+id/password"
         style="@style/marginHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Your password:"
+        android:hint="@string/your_password"
         app:layout_constraintTop_toBottomOf="@id/number_of_phone" />
 
     <Button
